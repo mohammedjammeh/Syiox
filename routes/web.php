@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('weight.index');
+});
+
+Route::get('/xocial', function () {
+    return view('xocial');
 });
 
 Route::post('/weight', function () {

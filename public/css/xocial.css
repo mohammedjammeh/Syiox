@@ -1,0 +1,614 @@
+/**************
+    General
+***************/
+body {
+    background: #fafafa;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fafafa;
+    padding: 18px 0;
+}
+
+header h1 {
+    color: #a22a2a;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+
+/* section */
+section {
+    overflow: hidden;
+}
+
+/* section containers */
+.fixedSection {
+    position: fixed;
+    z-index: 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* section container columns */
+.firstColumm,
+.middleColumn,
+.thirdColumn {
+    font-family: 'Barlow', sans-serif;
+}
+
+.firstColumm {
+    float: left;
+    width: 28%;
+}
+
+.middleColumn {
+    position: relative;
+    color: #1a1a1a;
+    z-index: 1;
+    width: 41.5%;
+    margin: 0 auto;
+}
+
+.thirdColumn {
+    float: right;
+    width: 28%;
+}
+
+.columnContainer {
+    background: white;
+    border-radius: 6px;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+}
+
+.footer p {
+    margin-top: 3%;
+}
+
+/* form fields */
+input,
+select,
+textarea,
+button {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+
+input[type='text'],
+input[type='date'],
+input[type='time'],
+textarea,
+select {
+    color: #1a1a1a;
+    padding: 6px 5px 8px;
+}
+
+input[type='time'] {
+    padding: 5px 4px 7.6px;
+}
+
+/* form buttons */
+input[type='submit'],
+button {
+    background: #b62f2f;
+    cursor: pointer;
+    color: white;
+    padding: 8px 5px 10px;
+    transition: all 0.2s;
+    border: 0;
+}
+
+input[type='submit']:hover,
+button:hover {
+    background: #a22a2a;
+}
+
+input.regularBtn,
+button.regularBtn {
+    background: #a6a6a6;
+}
+
+input.regularBtn:hover,
+button.regularBtn:hover {
+    background: #999;
+}
+
+/* others */
+.hide {
+    display: none;
+}
+
+.loadingContainer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.loadingContainer div.loading div {
+    overflow: hidden;
+}
+
+.loadingContainer div.loading span {
+    background: #cb3434;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    display: block;
+    margin: 2px 3px;
+    float: left;
+    transition: all 0.2s;
+}
+
+.loadingContainer div.loading span.large {
+    background: #8e2525;
+    width: 14px;
+    height: 14px;
+    margin: 0 3px;
+}
+
+/* add class for this */
+/* #profileForm .loadingContainer div.loading span, */
+.linkup .broadcastForm .loadingContainer div.loading span,
+.linkup .leaveBtn .loadingContainer div.loading span {
+    background: #ccc;
+}
+
+/* #profileForm .loadingContainer div.loading span.large, */
+.linkup .broadcastForm .loadingContainer div.loading span.large,
+.linkup .leaveBtn .loadingContainer div.loading span.large {
+    background: #a6a6a6;
+}
+
+/*******************
+    First Column
+*******************/
+#linkupForm {
+    width: 90%;
+    padding: 5%;
+}
+
+#linkupForm > div {
+    margin: 0.5% 0 6% 0;
+}
+
+#linkupForm > div:last-child {
+    margin: 0 0 0.75% 0;
+}
+
+#linkupForm > div.dateAndTime {
+    overflow: hidden;
+}
+
+#linkupForm > div.dateAndTime div.date {
+    float: left;
+    width: 42%;
+}
+
+#linkupForm > div.dateAndTime div.time {
+    float: right;
+    width: 57%;
+}
+
+#linkupForm input,
+#linkupForm select,
+#linkupForm textarea {
+    width: 100%;
+}
+
+#linkupForm > div.dateAndTime div.date input {
+    width: 100%;
+}
+
+#linkupForm > div.dateAndTime div.time input {
+    width: 49.5%;
+}
+
+#linkupForm > div.dateAndTime div.time input.startTime {
+    float: left;
+}
+
+#linkupForm > div.dateAndTime div.time input.endTime {
+    float: right;
+}
+
+#linkupForm > div #contacts option {
+    margin: 1% 0;
+}
+
+#linkupForm > div #contacts option:first-child {
+    margin: 0;
+}
+
+#linkupForm div input[type='submit'] {
+    width: 37%;
+}
+
+#linkupForm div .loadingContainer {
+    padding: 12px 0 12px;
+}
+
+nav ul {
+    overflow: hidden;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin: 0% 0 4%;
+    width: 100%;
+}
+
+nav ul li a {
+    background: white;
+    position: relative;
+    color: #1a1a1a;
+    padding: 2.5% 0 3.25%;
+    text-decoration: none;
+    border-radius: 30px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+nav ul li a.active {
+    background: #f2f2f2;
+}
+
+nav ul li a:hover {
+    background: #e6e6e6;
+}
+
+nav ul li a span {
+    border: 0;
+}
+
+nav ul li a span.dot {
+    background: #a22a2a;
+    position: absolute;
+    top: 13px;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    border: 0;
+    border-radius: 50px;
+    transition: all 0.8s;
+}
+
+nav ul li a.attention span.dot {
+    transform: translateX(15px);
+}
+
+/*******************
+    Third Column
+*******************/
+.userSuggestions {
+    width: 90%;
+    padding: 0% 5% 2.2%;
+}
+
+.userSuggestions > div {
+    overflow: hidden;
+    padding: 5% 0;
+    /* background: red; */
+}
+
+.userSuggestions .info {
+    float: left;
+    width: 65%;
+    margin: 0;
+    /* background: yellow; */
+}
+
+.userSuggestions .info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.userSuggestions .info p:first-child {
+    margin-bottom: 5%;
+    letter-spacing: 0.5px;
+}
+
+.userSuggestions .info p:last-child {
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.userSuggestions button {
+    float: right;
+    width: 25%;
+    margin: 2.5% 0 0 0;
+    font-size: 15px;
+    padding: 4px 0 7px;
+}
+
+.userSuggestions .loadingContainer {
+    margin-top: 10px;
+    padding: 10px 0 10px;
+    width: 18%;
+    float: right;
+}
+
+/*******************
+    Middle Column
+*******************/
+/* linkup */
+.linkups {
+    letter-spacing: 0.25px;
+}
+
+.linkups .emptyMessage {
+    background: white;
+    padding: 1% 5%;
+    text-align: center;
+    letter-spacing: 0.25px;
+    line-height: 2;
+}
+
+.linkup {
+    padding: 0.8% 0 5%;
+    margin: 0 0 3%;
+}
+
+.linkup p {
+    text-align: center;
+    margin: 3.75% 0;
+}
+
+.linkup p i {
+    color: #8c8c8c;
+    font-size: 14px;
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.linkup .type {
+    font-size: 17px;
+}
+
+.linkup .description {
+    line-height: 1.6;
+    margin: 4% 5% 3.3%;
+}
+
+.linkup .members {
+    overflow: hidden;
+    list-style: none;
+    padding-left: 0;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.linkup .members li {
+    float: left;
+    margin: 2% 0;
+    text-align: center;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.linkup .members li i {
+    margin-left: 3px;
+    color: green;
+}
+
+.linkup .buttons {
+    overflow: hidden;
+    width: 100%;
+    margin: 3% auto 3%;
+}
+
+.linkup .broadcastForm {
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.linkup .broadcastForm select {
+    width: 50%;
+    float: left;
+}
+
+.linkup .broadcastForm input {
+    background: #f2f2f2;
+    color: #262626;
+    width: 48%;
+    float: right;
+}
+
+.linkup .broadcastForm input:hover {
+    background: #e6e6e6;
+}
+
+.linkup .joinBtn button,
+.linkup .leaveBtn button {
+    display: block;
+    width: 22%;
+    margin: 3.5% auto 0;
+}
+
+.linkup .leaveBtn button {
+    background: #e6e6e6;
+    color: #262626;
+}
+
+.linkup .leaveBtn button:hover {
+    background: #d9d9d9;
+}
+
+.linkup .broadcastForm .loadingContainer {
+    padding: 11px 0;
+    float: right;
+    width: 25%;
+    margin-right: 40px;
+}
+
+.linkup .joinBtn .loadingContainer,
+.linkup .leaveBtn .loadingContainer {
+    padding: 13px 0 12.5px;
+    width: 11%;
+}
+
+/* profile */
+.profile {
+    padding: 3% 3.5%;
+    margin-bottom: 3%;
+}
+
+#profileForm p,
+#profileForm label {
+    margin: 0 0 2.5%;
+    font-size: 16px;
+}
+
+#profileForm .fullname {
+    margin-bottom: 5%;
+}
+
+#profileForm .fullname label {
+    display: block;
+}
+
+#profileForm .fullname input {
+    width: 100%;
+}
+
+#profileForm .musicTaste,
+#profileForm .foodTaste,
+#profileForm .sportsTaste {
+    overflow: hidden;
+    margin: 2.5% 0;
+    margin: 0 0 5%;
+}
+
+#profileForm .musicTaste .inputContainer,
+#profileForm .foodTaste .inputContainer,
+#profileForm .sportsTaste .inputContainer {
+    float: left;
+    width: 33.33%;
+    margin: 1% 0;
+}
+
+#profileForm .regularBtn {
+    width: 15%;
+    padding: 6px 5px 8px;
+}
+
+#profileForm .loadingContainer {
+    padding: 10px 0 10px;
+}
+
+/* contacts */
+.contacts {
+    padding: 3% 3.5%;
+}
+
+.contacts > div {
+    margin: 0 0 8%;
+}
+
+.contacts > div:last-child {
+    margin: 0;
+}
+
+.contacts p.heading {
+    margin: 0 0 2.5%;
+    font-size: 16px;
+    color: black;
+}
+
+.contacts .list > div {
+    overflow: hidden;
+    margin: 2.5% 0;
+}
+
+.contacts .list p {
+    float: left;
+    margin: 1% 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contacts .list p.name {
+    width: 35%;
+    margin-right: 2%;
+}
+
+.contacts .list p.address {
+    width: 48%;
+    color: #666;
+}
+
+.contacts .list .removeBtnContainer {
+    width: 5%;
+    margin: 0.5px 0 0;
+    float: right;
+}
+
+.contacts .list .loadingContainer {
+    width: 12%;
+    float: right;
+    padding: 10px 0 0.5px;
+}
+
+.contacts .list button {
+    float: right;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+}
+
+.contacts .list button i {
+    color: #b62f2f;
+}
+
+.contacts .list button i:hover {
+    color: #a22a2a;
+}
+
+.contacts .search form {
+    overflow: hidden;
+}
+
+.contacts .search input[name='search'] {
+    float: left;
+    width: 92%;
+}
+
+.contacts .search button {
+    float: right;
+    width: 7.5%;
+    padding: 7px 5px 9px;
+    background: lightgrey;
+}
+
+.contacts .search button:hover {
+    background: #bfbfbf;
+}
+
+.contacts .search button i {
+    font-size: 14px;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Xocial</title>
+
+        <!-- Style -->
+        <link rel="stylesheet" href="{{ asset('css/xocial.css') }}">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+    <header>
+        <h1>Xocial</h1>
+    </header>
+
+    <section>
+        <div class="fixedSection">
+            <div class="firstColumm">
+                <form action="#" class="columnContainer" id="linkupForm">
+                    <div>
+                        <select name="type" id="type">
+                            <option value="Chilling">Chilling</option>
+                            <option value="Meet up">Meet up</option>
+                            <option value="Going out">Going out</option>
+                            <option value="Clubbing">Clubbing</option>
+                            <option value="Concert">Concert</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <textarea name="description" id="description" placeholder="description"></textarea>
+                    </div>
+
+                    <div>
+                        <input type="text" name="location" id="location" placeholder="location" />
+                    </div>
+
+                    <div class="dateAndTime">
+                        <div class="date">
+                            <input type="date" id="startDate" name="startDate" value="" />
+                        </div>
+
+                        <div class="time">
+                            <input type="time" id="startTime" name="startTime" value="00:00" class="startTime" />
+                            <input type="time" id="endTime" name="endTime" value="23:59" class="endTime" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <select name="contacts" id="contacts" multiple>
+                            <option value="" disabled>Contacts</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Broadcast" />
+
+                        <div class="loadingContainer loool">
+                            <div class="loading">
+                                <div>
+                                    <span class="large"></span>
+                                    <span></span>
+                                    <span class="third"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#" id="homeBtn" class="active">
+                                <span>Home</span>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="profileBtn">
+                                <span>Profile</span>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="connectBtn" class="loool">
+                                <span>Connect Wallet</span>
+                                <span class="dot"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="thirdColumn">
+                <div class="userSuggestions columnContainer"></div>
+
+                <div class="footer">
+                    <p>&copy; 2023 Xocial.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="middleColumn">
+            <div class="linkups">
+                <div class="emptyMessage loool">
+                    <p>
+                        No linkups have been broadcasted <br />
+                        to you yet but you will see them here once they are.
+                    </p>
+                </div>
+            </div>
+
+            <div class="user loool">
+                <div class="profile columnContainer">
+                    <form method="#" id="profileForm">
+                        <div class="fullname">
+                            <label for="fullname">Full name</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Full name" />
+                        </div>
+
+                        <div class="musicTaste">
+                            <p>Music Taste</p>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[0]" value="rap" />
+                                <label for="musicTaste[0]">Rap</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[1]" value="rock" />
+                                <label for="musicTaste[1]">Rock</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[2]" value="reggae" />
+                                <label for="musicTaste[2]">Reggae</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[3]" value="dancehall" />
+                                <label for="musicTaste[3]">Dancehall</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[4]" value="pop" />
+                                <label for="musicTaste[4]">Pop</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[5]" value="afrobeats" />
+                                <label for="musicTaste[5]">Afrobeats</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[6]" value="punk" />
+                                <label for="musicTaste[6]">Punk</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[7]" value="amapiano" />
+                                <label for="musicTaste[7]">Amapiano</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="musicTaste[]" id="musicTaste[8]" value="drill" />
+                                <label for="musicTaste[8]">Drill</label>
+                            </div>
+                        </div>
+
+                        <div class="foodTaste">
+                            <p>Food Taste</p>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[1]" value="stew" />
+                                <label for="foodTaste[1]">Stew</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[0]" value="sushi" />
+                                <label for="foodTaste[0]">Sushi</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[2]" value="jollof" />
+                                <label for="foodTaste[2]">Jollof</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[3]" value="jerk" />
+                                <label for="foodTaste[3]">Jerk</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[4]" value="curry" />
+                                <label for="foodTaste[4]">Curry</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[5]" value="lasagne" />
+                                <label for="foodTaste[5]">Lasagne</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[6]" value="fish" />
+                                <label for="foodTaste[6]">Fish</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[7]" value="chicken" />
+                                <label for="foodTaste[7]">Chicken</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="foodTaste[]" id="foodTaste[8]" value="lamb" />
+                                <label for="foodTaste[8]">Lamb</label>
+                            </div>
+                        </div>
+
+                        <div class="sportsTaste">
+                            <p>Sport Taste</p>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[1]" value="tennis" />
+                                <label for="sportsTaste[1]">Tennis</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[0]" value="cricket" />
+                                <label for="sportsTaste[0]">Cricket</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[2]" value="football" />
+                                <label for="sportsTaste[2]">Football</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[4]" value="golf" />
+                                <label for="sportsTaste[4]">Golf</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[5]" value="fighting" />
+                                <label for="sportsTaste[5]">Fighting</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[3]" value="basketball" />
+                                <label for="sportsTaste[3]">Basketball</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[6]" value="hokey" />
+                                <label for="sportsTaste[6]">Hokey</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[7]" value="swimming" />
+                                <label for="sportsTaste[7]">Swimming</label>
+                            </div>
+
+                            <div class="inputContainer">
+                                <input type="checkbox" name="sportsTaste[]" id="sportsTaste[8]" value="cycling" />
+                                <label for="sportsTaste[8]">Cycling</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="regularBtn" id="saveBtn">Save</button>
+                            <button class="regularBtn loool" id="editBtn">Edit</button>
+                            <button class="regularBtn loool" id="updateBtn">Update</button>
+                            <button class="regularBtn loool" id="cancelBtn">Cancel</button>
+
+                            <div class="loadingContainer loool">
+                                <div class="loading">
+                                    <div>
+                                        <span class="large"></span>
+                                        <span></span>
+                                        <span class="third"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contacts columnContainer">
+                    <div>
+                        <p class="heading">Contacts</p>
+
+                        <div class="list"></div>
+                    </div>
+
+                    <div>
+                        <p class="heading">Add Contact</p>
+
+                        <div class="search">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Search" />
+                                <button class="regularBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="list"></div>
+
+                        <div class="loool" id="noUsersMessage">
+                            <p>There are no users with the name or address: <span></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ asset('./js/app.js')}}"></script>
+    <script src="https://kit.fontawesome.com/b1d79f2ea5.js" crossorigin="anonymous"></script>
+    </body>
+</html>

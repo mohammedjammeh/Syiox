@@ -1,3 +1,84 @@
+/**************
+    General
+***************/
 body {
-    background: red;
+    background: #fafafa;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    padding: 2.5% 0;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+header h1 a {
+    font-style: italic;
+    color: #a22a2a;
+    text-decoration: none;
+}
+
+/*button*/
+button {
+    font-size: 14px;
+    width: 35px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 5px 9px;
+    margin-right: 2px;
+    transition: all 0.2s;
+    border: 0;
+    background: none;
+}
+
+button:hover {
+    background: #e6e6e6;
+}
+
+/* section */
+.table-holder {
+    background: #ffffff;
+    padding: 2.5% 0;
+    border-radius: 10px;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+table thead td {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 2.5% 0;
+}
+
+table tbody td {
+    color: #636363;
+    padding: 3% 0;
+}
+
+table tr {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.table-holder .footer button {
+    display: block;
+    /*background: red;*/
+    margin: 1.5% auto 0;
+    font-size: 21px;
+    padding: 6px 0px 5px;
+}
+
+.table-holder .footer button:hover {
+    background: #e6e6e6;
 }
