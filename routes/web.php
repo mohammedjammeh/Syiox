@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('weight.index');
 });
 
+Route::get('/weights/create', function () {
+    return view('weight.create');
+});
+
 Route::get('/xocial', function () {
     return view('xocial');
 });
