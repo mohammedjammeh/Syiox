@@ -1,5 +1,5 @@
 
-<x-layout>
+<x-layout title="syiox home">
     <div class="table-holder">
         <table>
             <thead>

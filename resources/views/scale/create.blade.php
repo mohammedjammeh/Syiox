@@ -1,5 +1,5 @@
 
-<x-layout>
+<x-layout title="syiox - create">
     <div class="create-holder">
         <form action="#" class="columnContainer" id="linkupForm">
             <div>
