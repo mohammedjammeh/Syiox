@@ -16,10 +16,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
     </head>
     <body>
         <header>
@@ -31,8 +28,8 @@
                 <table>
                     <thead>
                         <tr>
-                            <td>item</td>
-                            <td>weight (%)</td>
+                            <td>name</td>
+                            <td>weight</td>
                             <td>status</td>
                             <td>actions</td>
                         </tr>
@@ -87,11 +84,15 @@
                     </tbody>
                 </table>
 
-                <div class="footer">
+                <div class="t-footer">
                     <button><i class="fa-regular fa-square-plus"></i></button>
                 </div>
             </div>
         </section>
+
+        <footer>
+            <p>&copy; Syiox 2024.</p>
+        </footer>
 
         <script src="{{ asset('js/app.js')}}"></script>
         <script src="https://kit.fontawesome.com/b1d79f2ea5.js" crossorigin="anonymous"></script>

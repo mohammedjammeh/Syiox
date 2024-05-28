@@ -3,8 +3,29 @@
 ***************/
 body {
     background: #fafafa;
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto;
+}
+
+section, footer {
+    font-family: 'Barlow', sans-serif;
+}
+
+button {
+    font-size: 14px;
+    width: 35px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 5px 9px;
+    margin-right: 2px;
+    transition: all 0.2s;
+    border: 0;
+    background: none;
+}
+
+button:hover {
+    background: #e6e6e6;
 }
 
 /* header */
@@ -23,24 +44,6 @@ header h1 a {
     text-decoration: none;
 }
 
-/*button*/
-button {
-    font-size: 14px;
-    width: 35px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 8px 5px 9px;
-    margin-right: 2px;
-    transition: all 0.2s;
-    border: 0;
-    background: none;
-}
-
-button:hover {
-    background: #e6e6e6;
-}
-
 /* section */
 .table-holder {
     background: #ffffff;
@@ -49,16 +52,17 @@ button:hover {
 }
 
 table {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
-    text-align: center;
     border-collapse: collapse;
-    font-family: Tahoma, Geneva, sans-serif;
+}
+
+table td:last-of-type {
+    width: 100px;
 }
 
 table thead td {
     font-weight: bold;
-    font-size: 13px;
     padding: 2.5% 0;
 }
 
@@ -71,14 +75,20 @@ table tr {
     border-bottom: 1px solid #f2f2f2;
 }
 
-.table-holder .footer button {
+.t-footer button {
     display: block;
-    /*background: red;*/
     margin: 1.5% auto 0;
     font-size: 21px;
     padding: 6px 0px 5px;
 }
 
-.table-holder .footer button:hover {
+.t-footer button:hover {
     background: #e6e6e6;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    margin-top: 2%;
+    color: #808080;
 }
