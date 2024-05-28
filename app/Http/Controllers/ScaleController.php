@@ -13,7 +13,7 @@ class ScaleController extends Controller
      */
     public function index()
     {
-        //
+        return view('scale.index');
     }
 
     /**
@@ -21,7 +21,7 @@ class ScaleController extends Controller
      */
     public function create()
     {
-        //
+        return view('scale.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class ScaleController extends Controller
      */
     public function show(Scale $scale)
     {
-        //
+        return view('scale.show', ['scale' => $scale]);
     }
 
     /**
@@ -45,7 +45,7 @@ class ScaleController extends Controller
      */
     public function edit(Scale $scale)
     {
-        //
+        return view('scale.edit', ['scale' => $scale]);
     }
 
     /**

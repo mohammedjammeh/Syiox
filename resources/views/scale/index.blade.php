@@ -61,7 +61,7 @@
         </table>
 
         <div class="t-footer">
-            <button><i class="fa-regular fa-square-plus"></i></button>
+            <button type="button" onclick="window.location='{{ route("scales.create") }}'"><i class="fa-regular fa-square-plus"></i></button>
         </div>
     </div>
 </x-layout>

@@ -1,30 +1,15 @@
 <?php
 
+use App\Http\Controllers\Api\V1\ScaleController as ApiScaleController;
+use App\Http\Controllers\ScaleController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('weight.index');
-});
+Route::get('/', [ScaleController::class, 'index'])->name('home');
+Route::resource('scales', ScaleController::class);
 
-Route::get('/weights/create', function () {
-    return view('weight.create');
-});
+Route::post('api/scale', [ApiScaleController::class, 'update']);
 
 Route::get('/xocial', function () {
     return view('xocial');
 });
 
-Route::post('/weight', function () {
-    if (!isset($_POST["weight"])) {
-        return '';
-    }
-
-    \App\Models\User::create([
-        'name' => 'Hello',
-        'email' => 'mohammedjammeh@yahoo.com',
-        'password' => '123',
-        'remember_token' => 'hello',
-    ]);
-
-    return 'Successfully stored!';
-});
