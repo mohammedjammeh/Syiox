@@ -28,7 +28,51 @@ button:hover {
     background: #e6e6e6;
 }
 
-/* header */
+/* form fields */
+form div {
+    margin: 5% 0;
+}
+
+input,
+select,
+textarea {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    color: #1a1a1a;
+    padding: 10px 10px 12px;
+    width: 100%;
+}
+
+input[type='submit'] {
+    background: #b62f2f;
+    cursor: pointer;
+    color: white;
+    padding: 7px 5px 10px;
+    transition: all 0.2s;
+    border: 0;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+
+input[type='submit']:hover{
+    background: #a22a2a;
+}
+
+input.regular-btn {
+    background: #a6a6a6;
+}
+
+input.regular-btn:hover {
+    background: #999;
+}
+
+/**************
+    HEADER
+***************/
 header {
     padding: 2.5% 0;
 }
@@ -44,7 +88,19 @@ header h1 a {
     text-decoration: none;
 }
 
-/* section */
+/**************
+    FOOTER
+***************/
+footer {
+    text-align: center;
+    margin-top: 2%;
+    color: #808080;
+}
+
+/**************
+    SECTION
+***************/
+/* index */
 .table-holder {
     background: #ffffff;
     padding: 2.5% 0;
@@ -86,9 +142,15 @@ table tr {
     background: #e6e6e6;
 }
 
-/* footer */
-footer {
-    text-align: center;
-    margin-top: 2%;
-    color: #808080;
+/* create */
+.create-holder {
+    background: #ffffff;
+    padding: 2.5% 0;
+    border-radius: 10px;
+}
+
+.create-holder form {
+    width: 45%;
+    margin: 0 auto;
+    border-collapse: collapse;
 }
