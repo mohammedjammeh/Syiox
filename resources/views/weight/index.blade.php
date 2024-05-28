@@ -5,7 +5,7 @@
             <thead>
                 <tr>
                     <td>name</td>
-                    <td>weight</td>
+                    <td>size</td>
                     <td>status</td>
                     <td>actions</td>
                 </tr>
@@ -31,7 +31,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>water pack</td>
+                    <td>water</td>
                     <td>60%</td>
                     <td>medium</td>
                     <td>
