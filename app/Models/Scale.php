@@ -15,6 +15,7 @@ class Scale extends Model
         'name',
         'external_id',
         'max_weight',
+        'description',
         'status',
     ];
 

@@ -19,6 +19,7 @@ class ScaleSeeder extends Seeder
                 'name' => 'oat milk',
                 'external_id' => '1-abc-def',
                 'max_weight' => 10,
+                'description' => 'oatty milk, nice drink, more sips',
                 'status' => ScaleStatus::FULL,
             ],
             [
@@ -26,6 +27,7 @@ class ScaleSeeder extends Seeder
                 'name' => 'coca cola',
                 'external_id' => '2-abc-def',
                 'max_weight' => 10,
+                'description' => null,
                 'status' => ScaleStatus::EMPTY,
             ],
             [
@@ -33,6 +35,7 @@ class ScaleSeeder extends Seeder
                 'name' => 'water',
                 'external_id' => '3-abc-def',
                 'max_weight' => 10,
+                'description' => 'drink my friend, you need water',
                 'status' => ScaleStatus::HALF,
             ],
             [
@@ -40,6 +43,7 @@ class ScaleSeeder extends Seeder
                 'name' => 'cereals',
                 'external_id' => '4-abc-def',
                 'max_weight' => 10,
+                'description' => null,
                 'status' => ScaleStatus::HALF,
             ],
             [
@@ -47,6 +51,7 @@ class ScaleSeeder extends Seeder
                 'name' => 'coffee',
                 'external_id' => '5-abc-def',
                 'max_weight' => '10',
+                'description' => null,
                 'status' => ScaleStatus::EMPTY,
             ],
         ]);

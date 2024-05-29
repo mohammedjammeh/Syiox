@@ -53,7 +53,9 @@ class ScaleController extends Controller
      */
     public function update(UpdateScaleRequest $request, Scale $scale)
     {
-        dd($scale);
+        $scale->update($request->validated());
+
+        return redirect(route('scales.edit', ['scale' => $scale->id]));
     }
 
     /**
