@@ -13,7 +13,7 @@ class ScaleController extends Controller
      */
     public function index()
     {
-        return view('scale.index');
+        return view('scale.index', ['scales' => Scale::all()]);
     }
 
     /**
@@ -53,7 +53,7 @@ class ScaleController extends Controller
      */
     public function update(UpdateScaleRequest $request, Scale $scale)
     {
-        //
+        dd($scale);
     }
 
     /**

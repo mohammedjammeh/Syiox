@@ -14,6 +14,7 @@ class Scale extends Model
     protected $fillable = [
         'name',
         'external_id',
+        'max_weight',
         'status',
     ];
 

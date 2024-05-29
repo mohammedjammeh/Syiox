@@ -12,7 +12,7 @@ class Tracking extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'size',
+        'weight',
         'scale_id',
     ];
 

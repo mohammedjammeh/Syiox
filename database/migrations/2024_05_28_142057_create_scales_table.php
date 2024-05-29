@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('external_id');
+            $table->decimal('max_weight');
             $table->enum('status', $scaleStatuses)->default(ScaleStatus::EMPTY->value);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

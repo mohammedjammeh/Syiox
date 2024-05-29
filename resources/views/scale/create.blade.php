@@ -1,7 +1,9 @@
-
 <x-layout title="syiox - create">
     <div class="create-holder">
-        <form action="#" class="columnContainer" id="linkupForm">
+        <form action="#">
+            @csrf
+            @method('POST')
+
             <div>
                 <input type="text" name="id" id="id" placeholder="id" />
             </div>
