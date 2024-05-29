@@ -12,13 +12,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $scaleStatuses = collect(ScaleStatus::cases())->pluck('value')->toArray();
-
-        Schema::create('scales', function (Blueprint $table) use($scaleStatuses) {
+        Schema::create('trackings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('external_id');
-            $table->enum('status', $scaleStatuses)->default(ScaleStatus::EMPTY->value);
+            $table->unsignedBigInteger('scale_id');
+            $table->foreign('scale_id')->references('id')->on('scales')->onDelete('cascade');
+            $table->string('size');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
             $table->softDeletes();

@@ -7,22 +7,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Scale extends Model
+class Tracking extends Model
 {
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name',
-        'external_id',
-        'status',
+        'size',
+        'scale_id',
     ];
 
-    protected $casts = [
-        'status' => ScaleStatus::class,
-    ];
-
-    public function trackings()
+    public function scale()
     {
-        return $this->hasMany(Tracking::class);
+        return $this->belongsTo(Scale::class);
     }
 }

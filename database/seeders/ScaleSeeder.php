@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Enums\ScaleStatus;
+use App\Models\Scale;
 use Illuminate\Database\Seeder;
 
 class ScaleSeeder extends Seeder
@@ -12,6 +13,37 @@ class ScaleSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Scale::insert([
+            [
+                'id' => 1,
+                'name' => 'oat milk',
+                'external_id' => '1a',
+                'status' => ScaleStatus::FULL,
+            ],
+            [
+                'id' => 2,
+                'name' => 'coca cola',
+                'external_id' => '2b',
+                'status' => ScaleStatus::EMPTY,
+            ],
+            [
+                'id' => 3,
+                'name' => 'water',
+                'external_id' => '3c',
+                'status' => ScaleStatus::HALF,
+            ],
+            [
+                'id' => 4,
+                'name' => 'cereals',
+                'external_id' => '4d',
+                'status' => ScaleStatus::HALF,
+            ],
+            [
+                'id' => 5,
+                'name' => 'coffee',
+                'external_id' => '5e',
+                'status' => ScaleStatus::EMPTY,
+            ],
+        ]);
     }
 }
