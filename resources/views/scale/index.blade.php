@@ -24,7 +24,15 @@
                             <i class="fa-regular fa-pen-to-square"></i>
                         </button>
 
-                        <button><i class="fa-regular fa-trash-can"></i></button>
+                        <form action="{{ route('scales.destroy', ['scale' => $scale->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+
+                            <button>
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </form>
+
                     </td>
                 </tr>
             @endforeach

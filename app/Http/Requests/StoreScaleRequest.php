@@ -11,7 +11,7 @@ class StoreScaleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreScaleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string',
+            'external_id' => 'required|string',
+            'max_weight' => 'required|decimal:0,4',
+            'description' => 'nullable',
         ];
     }
 }

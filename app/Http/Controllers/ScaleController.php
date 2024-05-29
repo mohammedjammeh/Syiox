@@ -29,7 +29,9 @@ class ScaleController extends Controller
      */
     public function store(StoreScaleRequest $request)
     {
-        //
+        Scale::create($request->validated());
+
+        return redirect(route('scales.index'));
     }
 
     /**
@@ -55,7 +57,8 @@ class ScaleController extends Controller
     {
         $scale->update($request->validated());
 
-        return redirect(route('scales.edit', ['scale' => $scale->id]));
+        return redirect(route('scales.index'));
+
     }
 
     /**
@@ -63,6 +66,8 @@ class ScaleController extends Controller
      */
     public function destroy(Scale $scale)
     {
-        //
+        $scale->delete();
+
+        return redirect(route('scales.index'));
     }
 }

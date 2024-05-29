@@ -113,6 +113,10 @@ table {
     border-collapse: collapse;
 }
 
+table form {
+    display: inline-block;
+}
+
 table td:last-of-type {
     width: 100px;
 }

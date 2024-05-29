@@ -3,4 +3,5 @@
     <p>{{ $scale->external_id }}</p>
     <p>{{ $scale->max_weight }}</p>
     <p>{{ $scale->status }}</p>
+    <p>{{ $scale->description }}</p>
 </x-layout>
