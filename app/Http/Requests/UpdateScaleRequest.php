@@ -23,7 +23,7 @@ class UpdateScaleRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'external_id' => 'required|string',
+            'external_id' => 'required|string|unique:scales,external_id',
             'max_weight' => 'required|decimal:0,4',
             'description' => 'nullable',
         ];

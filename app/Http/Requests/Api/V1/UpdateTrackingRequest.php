@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Api\V1;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreScaleRequest extends FormRequest
+class UpdateTrackingRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,8 @@ class StoreScaleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string',
-            'external_id' => 'required|string|unique:scales,external_id',
-            'max_weight' => 'required|decimal:0,4',
-            'description' => 'nullable',
+            'scale_id' => 'required|string|exists:scales,external_id',
+            'weight' => 'required|decimal:0,4',
         ];
     }
 }

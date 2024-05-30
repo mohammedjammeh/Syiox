@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('scales', function (Blueprint $table) use($scaleStatuses) {
             $table->id();
             $table->string('name');
-            $table->string('external_id');
+            $table->string('external_id')->unique();
             $table->decimal('max_weight');
             $table->text('description')->nullable();
             $table->enum('status', $scaleStatuses)->default(ScaleStatus::EMPTY->value);
