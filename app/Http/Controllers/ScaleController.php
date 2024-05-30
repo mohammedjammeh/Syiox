@@ -29,9 +29,9 @@ class ScaleController extends Controller
      */
     public function store(StoreScaleRequest $request)
     {
-        Scale::create($request->validated());
+        $scale = Scale::create($request->validated());
 
-        return redirect(route('scales.index'));
+        return redirect(route('scales.show', ['scale' => $scale]));
     }
 
     /**
@@ -57,7 +57,7 @@ class ScaleController extends Controller
     {
         $scale->update($request->validated());
 
-        return redirect(route('scales.index'));
+        return redirect(route('scales.show', ['scale' => $scale]));
 
     }
 

@@ -3,7 +3,6 @@
 ***************/
 body {
     background: #fafafa;
-    width: 1000px;
     margin: 0 auto;
 }
 
@@ -11,9 +10,13 @@ section, footer {
     font-family: 'Barlow', sans-serif;
 }
 
-button {
+/* buttons */
+.anchor-button,
+.form-button {
     font-size: 14px;
     width: 35px;
+    display: inline-block;
+    text-align: center;
     box-sizing: border-box;
     border-radius: 4px;
     cursor: pointer;
@@ -22,19 +25,38 @@ button {
     transition: all 0.2s;
     border: 0;
     background: none;
+    color: rgb(85, 26, 139);
 }
 
-button:hover {
+.anchor-button:hover,
+.form-button:hover {
     background: #e6e6e6;
 }
 
+.anchor-button:focus {
+    color: rgb(85, 26, 139);
+}
+
 /* form fields */
-form div {
+form > div {
     margin: 5% 0;
 }
 
+form .alert-danger {
+    color: #cc0000;
+    margin-top: 2%;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+input.is-invalid {
+    border: 1px solid red;
+}
+
 input,
-select,
 textarea {
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
@@ -62,19 +84,11 @@ input[type='submit']:hover{
     background: #a22a2a;
 }
 
-input.regular-btn {
-    background: #a6a6a6;
-}
-
-input.regular-btn:hover {
-    background: #999;
-}
-
 /**************
     HEADER
 ***************/
 header {
-    padding: 2.5% 0;
+    padding: 20px 0;
 }
 
 header h1 {
@@ -93,32 +107,47 @@ header h1 a {
 ***************/
 footer {
     text-align: center;
-    margin-top: 2%;
+    margin-top: 20px;
     color: #808080;
 }
 
 /**************
     SECTION
 ***************/
-/* index */
-.table-holder {
+.container {
     background: #ffffff;
-    padding: 2.5% 0;
+    width: 700px;
+    padding: 1.5% 0;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
-table {
-    width: 70%;
+.container > div {
+    width: 75%;
     margin: 0 auto;
+}
+
+.index-container {
+    width: 1000px;
+}
+
+/* index */
+table {
+    width: 100%;
+    table-layout:fixed;
     border-collapse: collapse;
 }
 
 table form {
-    display: inline-block;
+    display: inline;
+}
+
+table td:first-of-type {
+    padding-left: 10px;
 }
 
 table td:last-of-type {
-    width: 100px;
+    /*width: 100px;*/
 }
 
 table thead td {
@@ -135,26 +164,33 @@ table tr {
     border-bottom: 1px solid #f2f2f2;
 }
 
-.t-footer button {
+.table-add .anchor-button {
     display: block;
+    width: 40px;
+    border-radius: 5px;
+    text-align: center;
     margin: 1.5% auto 0;
     font-size: 21px;
-    padding: 6px 0px 5px;
+    padding: 5px 0 6px;
 }
 
-.t-footer button:hover {
+.table-add .anchor-button:hover {
     background: #e6e6e6;
 }
 
-/* create */
-.create-holder {
-    background: #ffffff;
-    padding: 2.5% 0;
-    border-radius: 10px;
+/* show */
+.show-container .attribute {
+    margin: 5%;
 }
 
-.create-holder form {
-    width: 45%;
-    margin: 0 auto;
-    border-collapse: collapse;
+.show-container .attribute span:first-of-type {
+    font-weight: bold;
+}
+
+.show-container .actions {
+    margin: 5%;
+}
+
+.show-container .actions form {
+    display: inline-block;
 }

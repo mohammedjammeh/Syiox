@@ -1,47 +1,48 @@
 <x-layout title="syiox home">
-    <div class="table-holder">
-        <table>
-            <thead>
-                <tr>
-                    <td>name</td>
-                    <td>size</td>
-                    <td>status</td>
-                    <td>hard id</td>
-                    <td>actions</td>
-                </tr>
-            </thead>
+    <div class="container index-container">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>name</td>
+                        <td>size</td>
+                        <td>status</td>
+                        <td>external id</td>
+                        <td>actions</td>
+                    </tr>
+                </thead>
 
-            <tbody>
+                <tbody>
 
-            @foreach ($scales as $scale)
-                <tr>
-                    <td>{{ $scale->name }}</td>
-                    <td>{{ $scale->max_weight }}</td>
-                    <td>{{ $scale->status }}</td>
-                    <td>{{ $scale->external_id }}</td>
-                    <td>
-                        <button type="button" onclick="window.location='{{ route("scales.edit", ['scale' => $scale->id]) }}'">
-                            <i class="fa-regular fa-pen-to-square"></i>
-                        </button>
+                @foreach ($scales as $scale)
+                    <tr>
+                        <td>{{ $scale->name }}</td>
+                        <td>{{ $scale->max_weight }}</td>
+                        <td>{{ $scale->status }}</td>
+                        <td>{{ $scale->external_id }}</td>
+                        <td>
+                            <a class="anchor-button" href="{{ route("scales.show", ['scale' => $scale->id]) }}"><i class="fa-regular fa-eye"></i></a>
 
-                        <form action="{{ route('scales.destroy', ['scale' => $scale->id]) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
+                            <a class="anchor-button" href="{{ route("scales.edit", ['scale' => $scale->id]) }}"><i class="fa-regular fa-pen-to-square"></i></a>
 
-                            <button>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </button>
-                        </form>
+                            <form action="{{ route('scales.destroy', ['scale' => $scale->id]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
 
-                    </td>
-                </tr>
-            @endforeach
+                                <button class="form-button">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
 
-        <div class="t-footer">
-            <button type="button" onclick="window.location='{{ route("scales.create") }}'"><i class="fa-regular fa-square-plus"></i></button>
+            <div class="table-add">
+                <a class="anchor-button" href="{{ route("scales.create") }}"><i class="fa-regular fa-square-plus"></i></a>
+            </div>
         </div>
     </div>
 </x-layout>
