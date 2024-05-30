@@ -146,10 +146,6 @@ table td:first-of-type {
     padding-left: 10px;
 }
 
-table td:last-of-type {
-    /*width: 100px;*/
-}
-
 table thead td {
     font-weight: bold;
     padding: 2.5% 0;
