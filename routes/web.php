@@ -9,7 +9,3 @@ Route::resource('scales', ScaleController::class);
 
 Route::post('api/scale', [ApiScaleController::class, 'update']);
 
-Route::get('/xocial', function () {
-    return view('xocial');
-});
-
