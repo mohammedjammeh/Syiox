@@ -19,12 +19,24 @@ class Scale extends Model
         'status',
     ];
 
+
     protected $casts = [
         'status' => ScaleStatus::class,
     ];
 
+    protected $appends = ['leftover'];
+
     public function trackings()
     {
         return $this->hasMany(Tracking::class);
+    }
+
+    public function getLeftoverAttribute()
+    {
+        $latestTrackingWeight = floatval(optional($this->trackings->last())->weight);
+        $maxWeight = floatval($this->max_weight);
+        $leftover = $latestTrackingWeight / $maxWeight;
+
+        return number_format($leftover, 2, '.', '');
     }
 }

@@ -5,8 +5,7 @@
                 <thead>
                     <tr>
                         <td>name</td>
-                        <td>size</td>
-                        <td>status</td>
+                        <td>leftover (%)</td>
                         <td>external id</td>
                         <td>actions</td>
                     </tr>
@@ -17,8 +16,7 @@
                 @foreach ($scales as $scale)
                     <tr>
                         <td>{{ $scale->name }}</td>
-                        <td>{{ $scale->max_weight }}</td>
-                        <td>{{ $scale->status }}</td>
+                        <td>{{ $scale->leftover }}</td>
                         <td>{{ $scale->external_id }}</td>
                         <td>
                             <a class="anchor-button" href="{{ route("scales.show", ['scale' => $scale->id]) }}"><i class="fa-regular fa-eye"></i></a>
@@ -40,7 +38,7 @@
                 </tbody>
             </table>
 
-            <div class="table-add">
+            <div class="add-scale">
                 <a class="anchor-button" href="{{ route("scales.create") }}"><i class="fa-regular fa-square-plus"></i></a>
             </div>
         </div>

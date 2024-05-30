@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('scale_id');
             $table->foreign('scale_id')->references('id')->on('scales')->onDelete('cascade');
-            $table->decimal('weight');
+            $table->decimal('weight', 8, 4);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
             $table->softDeletes();

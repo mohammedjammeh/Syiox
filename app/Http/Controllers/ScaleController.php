@@ -13,7 +13,9 @@ class ScaleController extends Controller
      */
     public function index()
     {
-        return view('scale.index', ['scales' => Scale::all()]);
+        $scales = Scale::with('trackings')->get();
+
+        return view('scale.index', ['scales' => $scales]);
     }
 
     /**
@@ -39,6 +41,8 @@ class ScaleController extends Controller
      */
     public function show(Scale $scale)
     {
+        $scale->load('trackings');
+
         return view('scale.show', ['scale' => $scale]);
     }
 

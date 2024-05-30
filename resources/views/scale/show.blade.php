@@ -8,6 +8,11 @@
                 </div>
 
                 <div class="attribute">
+                    <span>leftover:</span>
+                    <span>{{ $scale->leftover }}</span>
+                </div>
+
+                <div class="attribute">
                     <span>external ID:</span>
                     <span>{{ $scale->external_id }}</span>
                 </div>
@@ -15,11 +20,6 @@
                 <div class="attribute">
                     <span>max weight:</span>
                     <span>{{ $scale->max_weight }}</span>
-                </div>
-
-                <div class="attribute">
-                    <span>status:</span>
-                    <span>{{ $scale->status }}</span>
                 </div>
 
                 <div class="attribute">
@@ -40,6 +40,30 @@
                     </button>
                 </form>
             </div>
+
+            @if(count($scale->trackings))
+            <div class="trackings">
+                <table>
+                    <thead>
+                    <tr>
+                        <td>weight</td>
+                        <td>created at</td>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    @foreach ($scale->trackings as $tracking)
+                        <tr>
+                            <td>{{ $tracking->weight }}</td>
+                            <td>{{ $tracking->created_at }}</td>
+                        </tr>
+                    @endforeach
+
+                    </tbody>
+                </table>
+            </div>
+            @endif
         </div>
     </div>
 </x-layout>
